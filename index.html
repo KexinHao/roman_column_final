@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="output-1.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+  /* .tile {
+    position: absolute;
+  } */
+   /* .tile{
+     transform: scale(0.8);
+   } */
+
+  </style>
+  <script type="text/javascript">
+  function load_taobao_images(){
+    var div = document.getElementById('data');
+
+    for(var i = 0; i < images.length; i++){
+      var img = "<img class='tile' src='" + images[i] + "'>";
+      div.innerHTML = div.innerHTML + img;
+    }
+  }
+  </script>
+
+</head>
+<body onload="load_taobao_images()">
+  <div id="data">
+  </div>
+  <script>
+  $(document).ready(function(){
+    setTimeout(function(){
+      $( ".tile" ).draggable();
+    }, 10);
+  });
+  </script>
+</body>
+
+</html>
